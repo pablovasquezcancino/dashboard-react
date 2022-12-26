@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Personal from './pages/personal/Personal';
+import Calendario from './pages/calendario/Calendario';
+import Home from './pages/home/Home';
+import Tareas from './pages/tareas/Tareas';
+import Categorias from './pages/categorias/Categorias'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<React.Fragment>
+  
+  <BrowserRouter>
+    <Routes>
+    <Route index element={<Home />} />
+    <Route path='personal' element={<Personal/>}/>
+    <Route path='calendario' element={<Calendario/>}/>
+    <Route path='/tareas' element={<Tareas/>}/>
+    <Route path='categorias' element={<Categorias />}/>
+    </Routes>
+  </BrowserRouter>
+</React.Fragment>
+    
   );
 }
 
