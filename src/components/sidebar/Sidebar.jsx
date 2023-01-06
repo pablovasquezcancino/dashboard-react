@@ -21,7 +21,7 @@ const Sidebar = () => {
 
             <li><PersonIcon className='icon'></PersonIcon><span>Mi cuenta</span></li>
             <Link to="/personal"><li><EngineeringIcon className='icon'/><span>Personal</span></li></Link>
-            <li><BarChartIcon className='icon' /><span>Graficos</span></li>
+             <Link to="/graficos"><li><BarChartIcon className='icon' /><span>Graficos</span></li></Link>
              <Link to='categorias'><li><span>Categorías</span></li></Link>
              <Link to="/calendario"><li>  <span>Calendario </span></li></Link>
             <Link to='tareas'> <li> <NoteAltOutlinedIcon  className='icon' /> <span>Tareas Pendientes</span></li></Link>
